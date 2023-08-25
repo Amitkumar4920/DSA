@@ -6,8 +6,7 @@ struct Node
     int data;
     Node *next;
 
-    Node(int d)
-    {
+    Node(int d){
         data = d;
         next = NULL;
     }
@@ -18,29 +17,24 @@ struct MyStack
     Node *head;
     int size;
 
-    MyStack()
-    {
+    MyStack(){
         head = NULL;
         size = 0;
     }
 
-    void push(int x)
-    {
+    void push(int x){
         Node *temp = new Node(x);
         temp->next = head;
         head = temp;
         size++;
     }
 
-    int pop()
-    {
-        if (head == NULL)
-        {
+    int pop(){
+        if (head == NULL){
             cout << "Stack is empty" << endl;
             return INT_MAX;
         }
-        else
-        {
+        else{
             int res = head->data;
             Node *temp = head;
             head = head->next;
@@ -50,23 +44,19 @@ struct MyStack
         }
     }
 
-    int peek()
-    {
-        if (head == NULL)
-        {
+    int peek(){
+        if (head == NULL){
             cout << "Stack is Empty" << endl;
             return INT_MAX;
         }
         return head->data;
     }
 
-    int size_()
-    {
+    int size_(){
         return size;
     }
 
-    bool isEmpty()
-    {
+    bool isEmpty(){
         return head == NULL;
     }
 };

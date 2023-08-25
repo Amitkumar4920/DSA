@@ -62,7 +62,5 @@ int main()
     cout << s.peek() << endl;
     cout << s.isEmpty() << endl;
 
-    
-
     return 0;
 }
